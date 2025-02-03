@@ -9,7 +9,7 @@ def read_capri_table(capri_file):
     for line in lines[1:]:
         data.append(line.strip().split(" "))
     return header, data
-
+# popopopoooopoooo
 capri_file = "capri_ss.csv"
 
 header, data = read_capri_table(capri_file)
@@ -25,7 +25,7 @@ for row in data:
     model = row[0]
     score = 0
     # here we calculate the score assigning the right weight to each term
-    for idx, weight in zip(idx_list, [0.1, -1.0, -0.1, 0.01]):
+    for idx, weight in zip(idx_list, [0.4, -1.0, -0.1, 0.01]):
         score += weight * float(row[idx])
     score_list.append([model, score])
 
